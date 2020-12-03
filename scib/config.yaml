@@ -1,0 +1,97 @@
+ROOT: '/storage/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/scIB_run'
+r_env : scIB-R-integration
+py_env : scIB-python
+conv_env : scIB-R-conversion
+timing: false
+
+unintegrated_metrics: false
+
+FEATURE_SELECTION:
+  hvg: 2000
+  full_feature: 0
+
+SCALING:
+  - unscaled
+  - scaled
+
+METHODS: # method name : ouput type(s)
+  seurat:
+    R: true
+    output_type: full
+
+  trvae:
+    no_scale: true
+    output_type: 
+      - embed
+      - full
+  harmony:
+    R: true
+    output_type: embed
+  # scvi:
+  #   no_scale: true
+  #  output_type: embed
+  fastmnn:
+    R: true
+    output_type:
+      - embed
+      - full
+
+  mnn: 
+     output_type: full
+  scanorama:
+    output_type:
+      - embed
+      - full
+  saucie:
+    output_type:
+      - full
+      - embed
+  # trvaep:
+  #   no_scale: true
+  #   output_type:
+  #     - embed
+  #     - full
+  bbknn:
+    output_type: knn
+  conos:
+    R: true
+    output_type: knn
+  combat:
+    output_type: full
+  liger:
+    no_scale: true
+    R: true
+    output_type: embed
+  # scgen:
+  #   output_type: full
+  #   use_celltype: true
+  # desc:
+  #   output_type: embed
+
+DATA_SCENARIOS:
+  retinal:
+    batch_key: study
+    label_key: cell.type
+    assay: expression
+    organism: human
+    file: /storage/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/src/retinal/human_retinal.h5ad
+
+    #mouse_atlas:
+    #batch_key: study # TODO: we need batch over all samples as well
+    #label_key: cell_type_union
+    #organsism: mouse
+    #assay: expression
+    #file: /storage/groups/ml01/workspace/group.daniela/atlases_merged_anno_new.h5ad
+    #mouse_brain:
+    #batch_key: study
+    #label_key: cell_type
+    #organism: mouse
+    #assay: expression
+    #file: /storage/groups/ml01/workspace/maren.buettner/data_integration/data/mouse_brain/mouse_brain_slim_cc_rev.h5ad
+    #  mouse_brain_atac:
+    #    batch_key: batchname
+    #label_key: cell_type_consensus
+    #organism: mouse
+    #assay: atac
+    #file: /mnt/znas/icb_zstore01/groups/ce01/workspace/Benchmarking_data_integration/data/brain_atac/atac_brain_processed.h5ad
+
