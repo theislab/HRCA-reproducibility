@@ -1,0 +1,15 @@
+,conos_knn
+NMI_cluster/label,0.5613761562085128
+ARI_cluster/label,0.22672257640463508
+ASW_label,
+ASW_label/batch,
+PCR_batch,
+cell_cycle_conservation,
+isolated_label_F1,0.0
+isolated_label_silhouette,
+graph_conn,0.8673862000303736
+kBET,0.38092086217492604
+iLISI,0.0
+cLISI,0.9999999999999997
+hvg_overlap,
+trajectory,
