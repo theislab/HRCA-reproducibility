@@ -1,0 +1,15 @@
+leiden	BC_Macaque
+0	FMB
+1	RBC
+2	IMB
+3	DB2
+4	DB5
+5	DB1
+6	DB4a
+7	DB3b
+8	BB/GB
+9	DB6
+10	OFFx
+11	DB3a
+16	DB4b
+17	BB/GB

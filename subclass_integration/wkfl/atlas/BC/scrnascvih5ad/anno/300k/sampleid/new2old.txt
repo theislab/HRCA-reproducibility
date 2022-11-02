@@ -1,0 +1,11 @@
+Chen_b_17D013_lobe_NeuNT	D17D13_NeuNT
+Chen_b_19D013_fovea	D19D013_fovea
+Chen_b_19D013_macular	D19D013_macular
+Chen_b_19D013_lobe_NeuNT	D19D013_per
+Chen_b_19D014_fovea	D19D014_fovea
+Chen_b_19D014_macular	D19D014_macular
+Chen_b_19D014_lobe_NeuNT	D19D014_per
+Chen_b_19D015_fovea	D19D015_fovea
+Chen_b_19D015_macular	D19D015_macular
+Chen_b_19D015_lobe_Nu	D19D015_per
+Chen_b_19D016_macular	D19D016_macular
