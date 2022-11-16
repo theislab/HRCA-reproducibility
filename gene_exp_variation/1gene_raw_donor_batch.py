@@ -5,10 +5,8 @@ import pandas as pd
 import os
 import numpy as np
 
-#datafile="/storage/singlecell/jinli/wkfl/metaanalysis/deg/filename/fnameinfo_145.txt"
 datafile="/storage/chenlab/Users/junwang/human_meta/data/atlasrna_metadata_chen.txt"
 #batch   donor   file
-#Chen_a_10x3_Lobe_19_D003_NeuN   Chen_19_D003    /storage/singlecell/jinli/wkfl/metaanalysis/prvdata/lobe/scrnaseurath5ad2h5seurat/10x3_Lobe_19_D003_NeuN.h5ad
 donor=sys.argv[1] #"/storage/chenlab/Users/junwang/human_meta/data/donor30"
 dir1="/storage/chenlab/Users/junwang/human_meta/data/genexp_donor_raw_batch_new"
 #os.mkdir(dir1)

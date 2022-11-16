@@ -1,6 +1,5 @@
 #!/usr/bin/perl -w
 use strict;
-#my @sample_list=("D028_13", "D027_13", "D026_13", "D021_13", "D019_13", "D018_13", "D017_13", "D013_13", "D009_13","D005_13", "D030_13", "19_D019", "19_D011", "19_D010","19_D009", "19_D008",  "19_D007", "19_D006","19_D005","19_D003");
 my $sample_list = "/storage/chenlab/Users/junwang/human_meta/data/donor_all_batch_new_celltype_num";
 my %sample;
 open(INPUT,$sample_list);
