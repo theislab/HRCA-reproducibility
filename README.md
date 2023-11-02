@@ -1,4 +1,4 @@
-## Human Retina Cell Atlas v1 | Integration bencharmk
+## Human Retina Cell Atlas v1 | Integration benchmark and query-to-reference
 
 In this repository, notebooks are provided for the following analyses:
 
