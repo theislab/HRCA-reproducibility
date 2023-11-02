@@ -1,0 +1,5 @@
+2022-10-07 00:45:04.611059: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-10-07 00:45:06.981209: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1523] Created device /device:GPU:0 with 30994 MB memory:  -> device: 0, name: Tesla V100-SXM3-32GB, pci bus id: 0000:c1:00.0, compute capability: 7.0
+/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/rpy2/robjects/pandas2ri.py:14: FutureWarning: pandas.core.index is deprecated and will be removed in a future version.  The public classes are available in the top-level namespace.
+  from pandas.core.index import Index as PandasIndex

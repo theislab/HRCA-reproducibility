@@ -1,0 +1,3 @@
+head -n 12 queries_postintegration_save_embeddings.sh | tail -n 1
+==> queries_postintegration_save_embeddings.sh <==
+conda run -n scIB-python python scripts/save_embeddings.py --input /lustre/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/data/integration_march_2021/output/retinal_all_cells_Chenfixed+Hackney_batch_donor_dataset_cell.type/integration/unscaled/HVG.3K/scvi_E25.h5ad --outfile /lustre/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/data/integration_march_2021/output/retinal_all_cells_Chenfixed+Hackney_batch_donor_dataset_cell.type/embeddings/unscaled/HVG.3K/scvi_E25_embed.csv             --method scvi_E25 --batch_key batch_donor_dataset             --label_key cell.type --result embed

@@ -1,0 +1,35 @@
+['00_6_run_GPU_methods.py', '0']
+pytorch + cuda
+1.8.0
+2.7.0
+scgen
+# of detected devices 2
+0 /device:CPU:0
+1 /device:GPU:0
+query 0
+method                                                       scgen
+hvg                                                           3000
+cell_type_key                                            cell.type
+input            /lustre/groups/ml01/workspace/ignacio.ibarra/t...
+output           /lustre/groups/ml01/workspace/ignacio.ibarra/t...
+nepochs                                                        NaN
+nlayers                                                        NaN
+nhidden                                                        NaN
+Name: 0, dtype: object
+# epochs nan
+True /lustre/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/data/integration_march_2021/output/retinal_all_cells_Chenfixed+Hackney_batch_donor_dataset_cell.type/prepare/unscaled/HVG.3K/adata_pre.h5ad
+False /lustre/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/data/integration_march_2021/output/retinal_all_cells_Chenfixed+Hackney_batch_donor_dataset_cell.type/integration/unscaled/HVG.3K/scgen.h5ad
+
+False /lustre/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/data/integration_march_2021/output/retinal_all_cells_Chenfixed+Hackney_batch_donor_dataset_cell.type/integration/unscaled/HVG.3K/scgen_embed.csv
+reading input...
+location of scripts...
+<module 'scIB.integration' from '/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/scIB/integration.py'>
+(568985, 3000)
+scgen
+# of detected devices 2
+0 /device:CPU:0
+1 /device:GPU:0
+GPU device found True 1
+1 /device:GPU:0
+starting scgen
+here...

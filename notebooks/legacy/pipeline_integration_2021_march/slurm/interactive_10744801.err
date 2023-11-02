@@ -1,0 +1,8 @@
+2022-10-07 14:54:59.355320: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-10-07 14:55:01.235120: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1523] Created device /device:GPU:0 with 38286 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:47:00.0, compute capability: 8.0
+/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/rpy2/robjects/pandas2ri.py:14: FutureWarning: pandas.core.index is deprecated and will be removed in a future version.  The public classes are available in the top-level namespace.
+  from pandas.core.index import Index as PandasIndex
+INFO:scvi.inference.inference:KL warmup phase exceeds overall training phaseIf your applications rely on the posterior quality, consider training for more epochs or reducing the kl warmup.
+INFO:scvi.inference.inference:KL warmup for 400 epochs
+INFO:scvi.inference.inference:Training is still in warming up phase. If your applications rely on the posterior quality, consider training for more epochs or reducing the kl warmup.

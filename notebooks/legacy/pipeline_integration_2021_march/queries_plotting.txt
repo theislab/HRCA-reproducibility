@@ -1,0 +1,4 @@
+/mnt/znas/icb_zstore01/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/scIB_run/input_500_cells_dataset_cell.type/metrics_gathering_custom.csv
+/mnt/znas/icb_zstore01/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/scIB_run/input_1000_cells_dataset_cell.type/metrics_gathering_custom.csv
+/mnt/znas/icb_zstore01/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/scIB_run/input_1000_cells_batch.merged_cell.type/metrics_gathering_custom.csv
+/mnt/znas/icb_zstore01/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/scIB_run/input_500_cells_batch.merged_cell.type/metrics_gathering_custom.csv

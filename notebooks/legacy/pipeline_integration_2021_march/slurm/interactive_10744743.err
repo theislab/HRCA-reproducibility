@@ -1,0 +1,41 @@
+2022-10-07 14:48:02.366813: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-10-07 14:48:04.199143: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1523] Created device /device:GPU:0 with 30995 MB memory:  -> device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2022-10-07 14:48:19.272925: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1523] Created device /device:GPU:0 with 30995 MB memory:  -> device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2022-10-07 14:48:19.295475: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1523] Created device /device:GPU:0 with 30995 MB memory:  -> device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/rpy2/robjects/pandas2ri.py:14: FutureWarning: pandas.core.index is deprecated and will be removed in a future version.  The public classes are available in the top-level namespace.
+  from pandas.core.index import Index as PandasIndex
+/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/scvi/model/base/_base_model.py:150: UserWarning: Make sure the registered X field in anndata contains unnormalized count data.
+  "Make sure the registered X field in anndata contains unnormalized count data."
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Set SLURM handle signals.
+/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/tqdm/std.py:535: TqdmWarning: clamping frac to range [0, 1]
+  colour=colour)
+Traceback (most recent call last):
+  File "00_6_run_GPU_methods.py", line 407, in <module>
+    integrated = scIB.integration.runScGen_v2_0_0(adata, batch, cell_type_key, epochs=n_epochs, device=device_gpu, verbose=1)
+  File "/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/scIB/integration.py", line 164, in runScGen_v2_0_0
+    early_stopping=True, early_stopping_patience=25, use_gpu=True)
+  File "/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/scvi/model/base/_training_mixin.py", line 77, in train
+    return runner()
+  File "/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/scvi/train/_trainrunner.py", line 76, in __call__
+    self.trainer.fit(self.training_plan, self.data_splitter)
+  File "/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/scvi/train/_trainer.py", line 166, in fit
+    super().fit(*args, **kwargs)
+  File "/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/pytorch_lightning/trainer/trainer.py", line 460, in fit
+    self._run(model)
+  File "/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/pytorch_lightning/trainer/trainer.py", line 758, in _run
+    self.dispatch()
+  File "/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/pytorch_lightning/trainer/trainer.py", line 799, in dispatch
+    self.accelerator.start_training(self)
+  File "/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/pytorch_lightning/accelerators/accelerator.py", line 96, in start_training
+    self.training_type_plugin.start_training(trainer)
+  File "/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/pytorch_lightning/plugins/training_type/training_type_plugin.py", line 144, in start_training
+    self._results = trainer.run_stage()
+  File "/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/pytorch_lightning/trainer/trainer.py", line 809, in run_stage
+    return self.run_train()
+  File "/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/pytorch_lightning/trainer/trainer.py", line 863, in run_train
+    epochs = range(self.current_epoch, self.max_epochs) if self.max_epochs else count(self.current_epoch)
+TypeError: 'numpy.float64' object cannot be interpreted as an integer

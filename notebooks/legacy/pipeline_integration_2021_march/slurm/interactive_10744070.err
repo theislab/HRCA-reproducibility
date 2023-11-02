@@ -1,0 +1,24 @@
+2022-10-07 00:45:04.589056: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-10-07 00:45:06.942158: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1523] Created device /device:GPU:0 with 30994 MB memory:  -> device: 0, name: Tesla V100-SXM3-32GB, pci bus id: 0000:96:00.0, compute capability: 7.0
+2022-10-07 00:45:28.867188: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1523] Created device /device:GPU:0 with 30994 MB memory:  -> device: 0, name: Tesla V100-SXM3-32GB, pci bus id: 0000:96:00.0, compute capability: 7.0
+2022-10-07 00:45:28.882231: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1523] Created device /device:GPU:0 with 30994 MB memory:  -> device: 0, name: Tesla V100-SXM3-32GB, pci bus id: 0000:96:00.0, compute capability: 7.0
+/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/rpy2/robjects/pandas2ri.py:14: FutureWarning: pandas.core.index is deprecated and will be removed in a future version.  The public classes are available in the top-level namespace.
+  from pandas.core.index import Index as PandasIndex
+/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/scvi/model/base/_base_model.py:150: UserWarning: Make sure the registered X field in anndata contains unnormalized count data.
+  "Make sure the registered X field in anndata contains unnormalized count data."
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Set SLURM handle signals.
+/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/scvi/model/base/_base_model.py:150: UserWarning: Make sure the registered X field in anndata contains unnormalized count data.
+  "Make sure the registered X field in anndata contains unnormalized count data."
+/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/scvi/model/base/_base_model.py:150: UserWarning: Make sure the registered X field in anndata contains unnormalized count data.
+  "Make sure the registered X field in anndata contains unnormalized count data."
+... storing 'batch' as categorical
+... storing 'filename' as categorical
+... storing 'scpred_prediction' as categorical
+... storing 'cell.type' as categorical
+... storing 'batch.merged' as categorical
+... storing 'donor' as categorical
+... storing 'batch_donor_dataset' as categorical
