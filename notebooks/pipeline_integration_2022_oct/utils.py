@@ -1,13 +1,18 @@
 import anndata
 import numpy as np
 import scanpy as sc
+import os
 from os.path import join, exists
 import gc
 
-def get_datasets(names, code_n_cells='', dataset_code='integration_oct_2022'):
+def get_datasets(names, code_n_cells='', dataset_code='integration_oct_2022',
+                 input_directory=None):
     adatas = []
-    bydataset_directory = '../../data/%s/input/bydataset%s' % (dataset_code, code_n_cells)
-    
+
+    if input_directory is None:
+        input_directory = '../../data/%s/input' % dataset_code
+    bydataset_directory = os.path.join(input_directory, 'bydataset%s' % code_n_cells)
+
     print('filenames', names)
     for f in names: # listdir(bydataset_directory):
         # if 'Chen' in f:
@@ -21,6 +26,10 @@ def get_datasets(names, code_n_cells='', dataset_code='integration_oct_2022'):
             continue
         
         ad = sc.read(p, cache=True)
+
+        # check duplicates 
+        assert ad.obs_names.value_counts().max() < 2
+
         ad.obs['cell.type'] = 'unassigned' if not 'scpred_prediction' in ad.obs else ad.obs['scpred_prediction']
 
         # ad.layers['counts'] = ad.layers['counts'].astype('float32')

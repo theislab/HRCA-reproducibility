@@ -13,56 +13,71 @@
 # In[2]:
 
 
-import scanpy as sc
 import warnings
 warnings.filterwarnings("ignore")
+
 import scIB
 import os
 import scanpy as sc
 from os.path import join
 from os import listdir
 import anndata
+
 import numpy as np
+
 import scipy
 
 
 # In[3]:
 
 
-import glob
+# datadir_orig = '/mnt/f/workspace/theislab/retina/data/RNA'
+datadir_orig = '/home/theislab/l_ibarra/workspace/theislab/retina/data/RNA'
+# datadir_orig = '/storage/groups/ml01/datasets/projects/20210318_retinal_data_integration_ignacio.ibarra_malte.luecken'
+
+# datadir_scran = '/mnt/znas/icb_zstore01/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/data/integration_march_2021/scran'
+# datadir_scran = '/mnt/f/workspace/theislab/retina/data/integration_oct_2022/scran'
+datadir_scran = '/home/theislab/l_ibarra/workspace/theislab/retina/data/integration_oct_2022/scran'
+
+
+# In[4]:
+
+
 # convert counts into float32
 # Convenience method for computing the size of objects
 def print_size_in_MB(x):
     print('{:.3} MB'.format(x.__sizeof__()/1e6))
 
 ### Use the scran related directory to map all the files we need to put together.
-datasets_scran = '/lustre/groups/ml01/workspace/ignacio.ibarra/theislab/retina/data/integration_oct_2022/scran'
-paths_h5ad = glob.glob(datasets_scran + '/*/*.h5ad')
-print(len(paths_h5ad))
+# filenames = [f for f in os.listdir(datadir_orig)]
 # filenames_md5 = [f.strip() for f in open(os.path.join(datadir_orig, 'md5sum.txt'))]
 
+filenames_md5 = [f.strip() for f in os.listdir(datadir_orig) if f.endswith(".h5ad")]
 
-# In[4]:
-
-
-filenames_by_dataset = {}
-for path_h5ad in paths_h5ad:
-    # print(f)
-    dataset = path_h5ad.split('/')[-2]
-    # print(dataset, os.path.basename(path_h5ad))
-    if not dataset in filenames_by_dataset:
-        filenames_by_dataset[dataset] = []
-    filenames_by_dataset[dataset].append(path_h5ad)
+files = set()
 
 
 # In[5]:
 
 
-print(filenames_by_dataset.keys())
-print(filenames_by_dataset['Chen_a'])
+filenames_by_dataset = {}
+for f in filenames_md5:
+    # dataset, filename = f.split(' ')[-1].split('/')[-2:]
+    dataset = f.split('_')[0] if not "Chen" in f else f.split('_')[0] + '_' + f.split('_')[1]
+    filename = f
+    print(dataset, filename)
+    if not dataset in filenames_by_dataset:
+        filenames_by_dataset[dataset] = []
+    filenames_by_dataset[dataset].append(filename)
 
 
 # In[6]:
+
+
+filenames_by_dataset.keys()
+
+
+# In[7]:
 
 
 # get all files from a single directory
@@ -70,13 +85,13 @@ def get_by_dataset(dataset_name, filenames=None, n_sample=None):
     adatas = []
     
     if (filenames is None):
-        filenames = [f for f in listdir(join(datasets_scran, dataset_name))]
+        filenames = [f for f in listdir(join(datadir_scran, dataset_name))]
     print('# datasets', len(filenames))
-    for f in filenames:
+    for fi, f in enumerate(filenames):
         if len(adatas) % 20 == 0:
             print('loaded so far', len(adatas))
-        p = join(datasets_scran, f)
-        # print(p)
+        p = join(datadir_scran, dataset_name, f)
+        print(fi, p)
         ad = sc.read_h5ad(p)
         
         if n_sample is not None:
@@ -87,23 +102,34 @@ def get_by_dataset(dataset_name, filenames=None, n_sample=None):
         ad.obs['dataset'] = dataset_name
         ad.obs['filename'] = f.replace('.h5ad', '')
         adatas.append(ad)
+
+    print('attempting concatenation..')
+    for ad in adatas:
+        print(ad.shape)
     return adatas[0].concatenate(adatas[1:]) # join='outer')
 
 
-# In[ ]:
+# In[12]:
 
 
 from os.path import exists
-for n_sample in [100,]: #  200, 500, None]: # 500, 1000, None]:
+for n_sample in [500, None]:
     for dataset in filenames_by_dataset:
         print(dataset)
-
+        if 'Chen' in dataset:
+            continue
         subsampling_code = ('_' + str(n_sample) if n_sample is not None else '')
+
         next_filename = '%s%s.h5ad' % (dataset, subsampling_code)
-        outdir = '../../data/integration_oct_2022/input/bydataset%s' % subsampling_code
+
+        outdir = datadir_scran.replace('scran', 'input/bydataset%s' % subsampling_code)
+        print(outdir)
+
         if not exists(outdir):
-            os.makedirs(outdir)
+            os.mkdir(outdir)
+            
         path_by_dataset = join(outdir, '%s' % (next_filename))
+
         
         if exists(path_by_dataset):
             continue
@@ -119,13 +145,6 @@ for n_sample in [100,]: #  200, 500, None]: # 500, 1000, None]:
             print(ad.shape)
         
         print(ad.shape)
-        
-        if ad.raw is not None:
-            del ad.raw
-        
-        # convert counts into int16
-        ad.layers['counts'] = ad.layers['counts'].astype('int16')        
         ad.write(path_by_dataset, compression='lzf')
-        print(dataset, 'done...')        
-    
+        print(dataset, 'done...')
 
