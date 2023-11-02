@@ -1,0 +1,42 @@
+['00_6_run_GPU_methods.py', '14']
+pytorch + cuda
+1.8.0
+2.7.0
+scgen
+# of detected devices 2
+0 /device:CPU:0
+1 /device:GPU:0
+query 14
+method                                                    scvi_E25
+hvg                                                           3000
+cell_type_key                                                  NaN
+input            /lustre/groups/ml01/workspace/ignacio.ibarra/t...
+output           /lustre/groups/ml01/workspace/ignacio.ibarra/t...
+nepochs                                                       25.0
+nlayers                                                        NaN
+nhidden                                                        NaN
+Name: 14, dtype: object
+# epochs 25.0
+True /lustre/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/data/integration_march_2021/output/retinal_all_cells_Chenfixed+Hackney_batch_donor_dataset_cell.type/prepare/unscaled/HVG.3K/adata_pre.h5ad
+False /lustre/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/data/integration_march_2021/output/retinal_all_cells_Chenfixed+Hackney_batch_donor_dataset_cell.type/integration/unscaled/HVG.3K/scvi_E25.h5ad
+
+False /lustre/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/data/integration_march_2021/output/retinal_all_cells_Chenfixed+Hackney_batch_donor_dataset_cell.type/integration/unscaled/HVG.3K/scvi_E25_embed.csv
+reading input...
+location of scripts...
+<module 'scIB.integration' from '/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/scIB/integration.py'>
+(568985, 3000)
+scVI...
+# of epochs (estimated or user): 25
+[34mINFO    [0m Remapping labels to [1m[[0m[1;36m0[0m,N[1m][0m                                              
+[34mINFO    [0m Remapping batch_indices to [1m[[0m[1;36m0[0m,N[1m][0m                                       
+[34mINFO    [0m Computing the library size for the new data                            
+[34mINFO    [0m Downsampled from [1;36m568985[0m to [1;36m568985[0m cells                                
+Train size 1.0
+[34mINFO    [0m KL warmup phase exceeds overall training phaseIf your applications rely
+         on the posterior quality, consider training for more epochs or reducing
+         the kl warmup.                                                         
+[34mINFO    [0m KL warmup for [1;36m400[0m epochs                                               
+training:   0%|          | 0/25 [00:00<?, ?it/s]training:   4%|▍         | 1/25 [04:09<1:39:55, 249.82s/it]training:   8%|▊         | 2/25 [08:19<1:35:42, 249.68s/it]training:  12%|█▏        | 3/25 [12:25<1:30:58, 248.14s/it]training:  16%|█▌        | 4/25 [16:35<1:27:04, 248.79s/it]training:  20%|██        | 5/25 [20:43<1:22:48, 248.45s/it]training:  24%|██▍       | 6/25 [24:49<1:18:22, 247.52s/it]training:  28%|██▊       | 7/25 [28:55<1:14:10, 247.27s/it]training:  32%|███▏      | 8/25 [33:05<1:10:16, 248.01s/it]training:  36%|███▌      | 9/25 [37:10<1:05:53, 247.10s/it]training:  40%|████      | 10/25 [41:15<1:01:37, 246.53s/it]training:  44%|████▍     | 11/25 [45:19<57:19, 245.68s/it]  training:  48%|████▊     | 12/25 [49:25<53:16, 245.92s/it]training:  52%|█████▏    | 13/25 [53:32<49:12, 246.04s/it]training:  56%|█████▌    | 14/25 [57:38<45:06, 246.05s/it]training:  60%|██████    | 15/25 [1:01:50<41:17, 247.78s/it]training:  64%|██████▍   | 16/25 [1:06:02<37:21, 249.05s/it]training:  68%|██████▊   | 17/25 [1:10:06<33:01, 247.72s/it]training:  72%|███████▏  | 18/25 [1:14:12<28:49, 247.13s/it]training:  76%|███████▌  | 19/25 [1:18:17<24:38, 246.36s/it]training:  80%|████████  | 20/25 [1:22:22<20:30, 246.06s/it]training:  84%|████████▍ | 21/25 [1:26:30<16:26, 246.59s/it]training:  88%|████████▊ | 22/25 [1:30:35<12:18, 246.06s/it]training:  92%|█████████▏| 23/25 [1:34:39<08:11, 245.65s/it]training:  96%|█████████▌| 24/25 [1:38:46<04:05, 245.84s/it]training: 100%|██████████| 25/25 [1:42:58<00:00, 247.96s/it]training: 100%|██████████| 25/25 [1:42:59<00:00, 247.16s/it]
+[34mINFO    [0m Training is still in warming up phase. If your applications rely on the
+         posterior quality, consider training for more epochs or reducing the kl
+         warmup.                                                                

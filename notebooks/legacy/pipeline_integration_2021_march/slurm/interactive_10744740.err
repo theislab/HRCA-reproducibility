@@ -1,0 +1,11 @@
+2022-10-07 14:48:01.321269: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-10-07 14:48:02.150499: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1523] Created device /device:GPU:0 with 38286 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:47:00.0, compute capability: 8.0
+/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/rpy2/robjects/pandas2ri.py:14: FutureWarning: pandas.core.index is deprecated and will be removed in a future version.  The public classes are available in the top-level namespace.
+  from pandas.core.index import Index as PandasIndex
+Traceback (most recent call last):
+  File "00_6_run_GPU_methods.py", line 379, in <module>
+    integrated, trainer = scIB.integration.runScvi(adata, batch, n_epochs=n_epochs)
+  File "/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/scIB/integration.py", line 255, in runScvi
+    print('# of epochs (estimated or user): %i' % n_epochs)
+ValueError: cannot convert float NaN to integer

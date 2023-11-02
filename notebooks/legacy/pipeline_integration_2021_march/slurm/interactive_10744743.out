@@ -1,0 +1,70 @@
+['00_6_run_GPU_methods.py', '0']
+pytorch + cuda
+1.8.0
+2.7.0
+scgen
+# of detected devices 2
+0 /device:CPU:0
+1 /device:GPU:0
+query 0
+method                                                       scgen
+hvg                                                           3000
+cell_type_key                                            cell.type
+input            /lustre/groups/ml01/workspace/ignacio.ibarra/t...
+output           /lustre/groups/ml01/workspace/ignacio.ibarra/t...
+nepochs                                                        NaN
+nlayers                                                        NaN
+nhidden                                                        NaN
+Name: 0, dtype: object
+# epochs nan
+True /lustre/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/data/integration_march_2021/output/retinal_all_cells_Chenfixed+Hackney_batch_donor_dataset_cell.type/prepare/unscaled/HVG.3K/adata_pre.h5ad
+False /lustre/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/data/integration_march_2021/output/retinal_all_cells_Chenfixed+Hackney_batch_donor_dataset_cell.type/integration/unscaled/HVG.3K/scgen.h5ad
+
+False /lustre/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/data/integration_march_2021/output/retinal_all_cells_Chenfixed+Hackney_batch_donor_dataset_cell.type/integration/unscaled/HVG.3K/scgen_embed.csv
+reading input...
+location of scripts...
+<module 'scIB.integration' from '/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/scIB/integration.py'>
+(568985, 3000)
+scgen
+# of detected devices 2
+0 /device:CPU:0
+1 /device:GPU:0
+GPU device found True 1
+1 /device:GPU:0
+starting scgen
+here...
+importing scgen
+batch key batch_donor_dataset
+celltype key cell.type
+Index(['batch', 'dataset', 'filename', 'nCount_RNA', 'nFeature_RNA',
+       'scpred_AC', 'scpred_Astrocyte', 'scpred_BC', 'scpred_Cone',
+       'scpred_HC', 'scpred_MG', 'scpred_Microglia', 'scpred_RGC',
+       'scpred_RPE', 'scpred_Rod', 'scpred_max', 'scpred_prediction',
+       'size_factors', 'cell.type', 'batch.merged', 'donor',
+       'batch_donor_dataset'],
+      dtype='object')
+True
+Num GPUs Available:  1
+name: "/device:GPU:0"
+device_type: "GPU"
+memory_limit: 32501137408
+locality {
+  bus_id: 2
+  numa_node: 1
+  links {
+  }
+}
+incarnation: 10276962009008923399
+physical_device_desc: "device: 0, name: Tesla V100S-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0"
+xla_global_id: 416903419
+
+[34mINFO    [0m Using batches from adata.obs[1m[[0m[32m"batch_donor_dataset"[0m[1m][0m                    
+[34mINFO    [0m Using labels from adata.obs[1m[[0m[32m"cell.type"[0m[1m][0m                               
+[34mINFO    [0m Using data from adata.X                                                
+[34mINFO    [0m Computing library size prior per batch                                 
+[34mINFO    [0m Successfully registered anndata object containing [1;36m568985[0m cells, [1;36m3000[0m   
+         vars, [1;36m46[0m batches, [1;36m11[0m labels, and [1;36m0[0m proteins. Also registered [1;36m0[0m extra   
+         categorical covariates and [1;36m0[0m extra continuous covariates.              
+[34mINFO    [0m Please do not further modify adata until model is trained.             
+training..
+Training: nan%|██████████| 0/nan [00:00<?, ?it/s]Training: nan%|██████████| 0/nan [00:00<?, ?it/s]

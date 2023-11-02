@@ -1,0 +1,42 @@
+['00_6_run_GPU_methods.py', '4']
+pytorch + cuda
+1.8.0
+2.7.0
+scgen
+# of detected devices 2
+0 /device:CPU:0
+1 /device:GPU:0
+query 4
+method                                                    scvi_E50
+hvg                                                           3000
+cell_type_key                                                  NaN
+input            /lustre/groups/ml01/workspace/ignacio.ibarra/t...
+output           /lustre/groups/ml01/workspace/ignacio.ibarra/t...
+nepochs                                                       50.0
+nlayers                                                        NaN
+nhidden                                                        NaN
+Name: 4, dtype: object
+# epochs 50.0
+True /lustre/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/data/integration_march_2021/output/retinal_all_cells_Chenfixed+Hackney_batch_donor_dataset_cell.type/prepare/unscaled/HVG.3K/adata_pre.h5ad
+False /lustre/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/data/integration_march_2021/output/retinal_all_cells_Chenfixed+Hackney_batch_donor_dataset_cell.type/integration/unscaled/HVG.3K/scvi_E50.h5ad
+
+False /lustre/groups/ml01/workspace/ignacio.ibarra/theislab/retinal_scRNAseq_integration/data/integration_march_2021/output/retinal_all_cells_Chenfixed+Hackney_batch_donor_dataset_cell.type/integration/unscaled/HVG.3K/scvi_E50_embed.csv
+reading input...
+location of scripts...
+<module 'scIB.integration' from '/home/icb/ignacio.ibarra/miniconda3/envs/scIB-python/lib/python3.7/site-packages/scIB/integration.py'>
+(568985, 3000)
+scVI...
+# of epochs (estimated or user): 50
+[34mINFO    [0m Remapping labels to [1m[[0m[1;36m0[0m,N[1m][0m                                              
+[34mINFO    [0m Remapping batch_indices to [1m[[0m[1;36m0[0m,N[1m][0m                                       
+[34mINFO    [0m Computing the library size for the new data                            
+[34mINFO    [0m Downsampled from [1;36m568985[0m to [1;36m568985[0m cells                                
+Train size 1.0
+[34mINFO    [0m KL warmup phase exceeds overall training phaseIf your applications rely
+         on the posterior quality, consider training for more epochs or reducing
+         the kl warmup.                                                         
+[34mINFO    [0m KL warmup for [1;36m400[0m epochs                                               
+training:   0%|          | 0/50 [00:00<?, ?it/s]training:   2%|▏         | 1/50 [05:07<4:11:24, 307.84s/it]training:   4%|▍         | 2/50 [10:19<4:07:54, 309.88s/it]training:   6%|▌         | 3/50 [15:29<4:02:53, 310.08s/it]training:   8%|▊         | 4/50 [20:42<3:58:38, 311.28s/it]training:  10%|█         | 5/50 [25:51<3:52:56, 310.59s/it]training:  12%|█▏        | 6/50 [31:02<3:47:41, 310.48s/it]training:  14%|█▍        | 7/50 [36:11<3:42:16, 310.14s/it]training:  16%|█▌        | 8/50 [41:20<3:36:46, 309.69s/it]training:  18%|█▊        | 9/50 [46:30<3:31:36, 309.67s/it]training:  20%|██        | 10/50 [51:38<3:26:07, 309.18s/it]training:  22%|██▏       | 11/50 [56:46<3:20:47, 308.91s/it]training:  24%|██▍       | 12/50 [1:01:55<3:15:46, 309.11s/it]training:  26%|██▌       | 13/50 [1:07:13<3:12:09, 311.60s/it]training:  28%|██▊       | 14/50 [1:12:29<3:07:50, 313.07s/it]training:  30%|███       | 15/50 [1:17:41<3:02:23, 312.66s/it]training:  32%|███▏      | 16/50 [1:22:48<2:56:11, 310.92s/it]training:  34%|███▍      | 17/50 [1:27:55<2:50:20, 309.71s/it]training:  36%|███▌      | 18/50 [1:33:02<2:44:47, 308.98s/it]training:  38%|███▊      | 19/50 [1:38:12<2:39:45, 309.22s/it]training:  40%|████      | 20/50 [1:43:20<2:34:29, 308.98s/it]training:  42%|████▏     | 21/50 [1:48:30<2:29:25, 309.17s/it]training:  44%|████▍     | 22/50 [1:53:39<2:24:16, 309.14s/it]training:  46%|████▌     | 23/50 [1:58:49<2:19:11, 309.30s/it]training:  48%|████▊     | 24/50 [2:03:54<2:13:34, 308.25s/it]training:  50%|█████     | 25/50 [2:09:03<2:08:29, 308.36s/it]training:  52%|█████▏    | 26/50 [2:14:10<2:03:11, 307.98s/it]training:  54%|█████▍    | 27/50 [2:19:16<1:57:48, 307.33s/it]training:  56%|█████▌    | 28/50 [2:24:26<1:52:57, 308.08s/it]training:  58%|█████▊    | 29/50 [2:29:36<1:48:02, 308.67s/it]training:  60%|██████    | 30/50 [2:34:44<1:42:51, 308.56s/it]training:  62%|██████▏   | 31/50 [2:39:54<1:37:51, 309.02s/it]training:  64%|██████▍   | 32/50 [2:45:02<1:32:37, 308.73s/it]training:  66%|██████▌   | 33/50 [2:50:10<1:27:23, 308.45s/it]training:  68%|██████▊   | 34/50 [2:55:27<1:22:58, 311.14s/it]training:  70%|███████   | 35/50 [3:00:36<1:17:36, 310.46s/it]training:  72%|███████▏  | 36/50 [3:05:42<1:12:07, 309.13s/it]training:  74%|███████▍  | 37/50 [3:10:49<1:06:47, 308.28s/it]training:  76%|███████▌  | 38/50 [3:15:57<1:01:38, 308.24s/it]training:  78%|███████▊  | 39/50 [3:21:06<56:32, 308.39s/it]  training:  80%|████████  | 40/50 [3:26:16<51:31, 309.12s/it]training:  82%|████████▏ | 41/50 [3:31:27<46:27, 309.69s/it]training:  84%|████████▍ | 42/50 [3:36:37<41:18, 309.80s/it]training:  86%|████████▌ | 43/50 [3:41:46<36:05, 309.34s/it]training:  88%|████████▊ | 44/50 [3:46:56<30:57, 309.61s/it]training:  90%|█████████ | 45/50 [3:52:04<25:46, 309.26s/it]training:  92%|█████████▏| 46/50 [3:57:14<20:37, 309.28s/it]training:  94%|█████████▍| 47/50 [4:02:21<15:26, 308.83s/it]training:  96%|█████████▌| 48/50 [4:07:32<10:18, 309.32s/it]training:  98%|█████████▊| 49/50 [4:12:42<05:09, 309.64s/it]training: 100%|██████████| 50/50 [4:17:49<00:00, 308.88s/it]training: 100%|██████████| 50/50 [4:17:49<00:00, 309.40s/it]
+[34mINFO    [0m Training is still in warming up phase. If your applications rely on the
+         posterior quality, consider training for more epochs or reducing the kl
+         warmup.                                                                

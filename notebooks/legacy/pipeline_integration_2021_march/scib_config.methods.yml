@@ -1,0 +1,54 @@
+  seurat:
+    R: true
+    output_type: full
+  trvae:
+    no_scale: true
+    output_type: 
+      - embed
+      - full
+  harmony:
+    R: true
+    output_type: embed
+  scvi:
+    no_scale: true
+    output_type: embed
+  fastmnn:
+    R: true
+    output_type:
+      - embed
+      - full
+  mnn: 
+     output_type: full
+  scanorama:
+    output_type:
+      - embed
+      - full
+  saucie:
+    output_type:
+      - full
+      - embed
+  trvaep:
+    no_scale: true
+    output_type:
+      - embed
+      - full
+  bbknn:
+    output_type: knn
+  conos:
+    R: true
+    output_type: knn
+  combat:
+    output_type: full
+  liger:
+    no_scale: true
+    R: true
+    output_type: embed
+  scgen:
+    output_type: full
+    use_celltype: true
+  desc:
+    output_type: embed
+  scanvi:
+    output_type: embed
+    no_scale: true
+    use_celltype: true

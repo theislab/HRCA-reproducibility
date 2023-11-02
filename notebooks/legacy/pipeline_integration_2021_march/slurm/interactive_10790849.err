@@ -1,0 +1,7 @@
+Could not find conda environment: scIB-python
+You can list all discoverable environments with `conda info --envs`.
+
+Traceback (most recent call last):
+  File "00_6_run_GPU_methods.py", line 15, in <module>
+    import scgen
+ModuleNotFoundError: No module named 'scgen'
